@@ -8,19 +8,13 @@ const socialLinks = [
   {
     id: 'social-github',
     platform: 'GitHub',
-    url: 'https://github.com/your-handle',
-    profileId: profileId,
-  },
-  {
-    id: 'social-linkedin',
-    platform: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/your-handle',
+    url: 'https://github.com/feeeed',
     profileId: profileId,
   },
   {
     id: 'social-telegram',
     platform: 'Telegram',
-    url: 'https://t.me/your_handle',
+    url: 'https://t.me/GEEKCR',
     profileId: profileId,
   },
 ];
@@ -38,44 +32,51 @@ const skills = [
 
 const experiences = [
   {
-    id: 'exp-senior',
-    company: 'Northstar Studio',
-    position: 'Senior Backend Engineer',
-    period: 'Jan 2023 - Present',
-    startDate: new Date('2023-01-01T00:00:00.000Z'),
+    id: 'exp-mid',
+    company: 'B2B Эко-Тех (Проектная разработка)',
+    position: 'Middle Fullstack Engineer',
+    period: 'Nov 2025 - Present',
+    startDate: new Date('2025-11-01T00:00:00.000Z'),
     endDate: null,
     achievements: [
-      'Designed and maintained high-load APIs for SaaS clients.',
-      'Reduced database query latency by optimizing Prisma access patterns.',
-      'Led architecture decisions for event-driven integrations.',
+      `Архитектура и Frontend: Спроектировал и реализовал клиентскую часть приложения на базе Next.js гибридный рендеринг SSR + CSR
+      с использованием методологии Feature-Sliced Design FSD, что позволило изолировать бизнес-домены и упростить онбординг новых разработчиков
+      Работа со сложными формами и данными: Разработал модуль многоступенчатых форм отчетности с валидацией на лету React Hook Form + Zod,
+      внедрил умный поиск контрагентов по ИНН с дебаунсом и виртуализацией списков для работы с многоуровневыми
+      государственными справочниками без просадок FPS`,
+      `Backend и безопасность: Спроектировал реляционную схему БД (PostgreSQL + Drizzle ORM)
+      для хранения версионности отчетов. Реализовал ролевую модель доступа (RBAC) и защиту маршрутов
+      через Next.js Middleware и JWT (Access/Refresh токены в HttpOnly cookies).
+      Оптимизация тяжелых вычислений: Разработал серверный модуль генерации и потоковой выгрузки (Streams)
+      сложных аналитических отчетов в формат .xlsx через ExcelJS, 
+      исключив блокировку Event Loop при выгрузке больших объемов данных.`,
     ],
     profileId: profileId,
   },
   {
-    id: 'exp-mid',
-    company: 'Pixel Forge',
-    position: 'Backend Engineer',
-    period: 'Jun 2020 - Dec 2022',
-    startDate: new Date('2020-06-01T00:00:00.000Z'),
-    endDate: new Date('2022-12-31T00:00:00.000Z'),
+    id: 'exp-mid1',
+    company: 'Сибкомплект (Промышленный E-commerce & Продуктовый конфигуратор)',
+    position: 'Middle Frontend Developer',
+    period: 'Feb 2025 - Sep 2025',
+    startDate: new Date('2025-02-01T00:00:00.000Z'),
+    endDate: new Date('2025-09-30T00:00:00.000Z'),
     achievements: [
-      'Built microservice integrations with GraphQL and PostgreSQL.',
-      'Improved deployment reliability through CI/CD automation.',
-      'Mentored junior engineers and reviewed pull requests.',
+      `Разработка WebGL/3D-интерфейсов: Спроектировал архитектуру интерактивного 3D-каталога и конфигуратора промышленного оборудования на базе React Three Fiber с синхронизацией состояния 3D-сцены и классического React UI через стор (Zustand).`,
+      `Масштабируемость и интеграция с CMS: Разработал универсальное ядро карточки товара, позволяющее контент-менеджерам загружать новые 3D-модели и настраивать точки обзора (камеры, хотспоты) напрямую из административной панели без участия разработчиков.`,
+      `Глубокая оптимизация производительности: Внедрил сжатие геометрии (Draco) и текстур (KTX2/WebP), настроил ленивую подгрузку ассетов (Suspense) и пулинг объектов. Решил проблему утечек памяти (Memory Leaks) при размонтировании WebGL-контекста при переходах в Next.js, обеспечив стабильные 60 FPS даже на устройствах со встроенной графикой.`,
     ],
     profileId: profileId,
   },
   {
-    id: 'exp-junior',
-    company: 'Code Canvas',
+    id: 'exp-mid2',
+    company: 'crmChat',
     position: 'Full-Stack Developer',
-    period: 'Sep 2018 - May 2020',
-    startDate: new Date('2018-09-01T00:00:00.000Z'),
-    endDate: new Date('2020-05-31T00:00:00.000Z'),
+    period: 'Apr 2024 - Feb 2025',
+    startDate: new Date('2024-04-01T00:00:00.000Z'),
+    endDate: new Date('2025-02-28T00:00:00.000Z'),
     achievements: [
-      'Delivered internal admin panels and API features.',
-      'Implemented clean frontend-backend contracts using REST and GraphQL.',
-      'Improved onboarding with documentation and reusable components.',
+      `Разработка Real-time функционала: Разрабатывал клиентские модули чатов и аналитических дашбордов. Реализовал отказоустойчивый слой работы с WebSockets (автореконнект, очередь неотправленных сообщений в офлайне, оптимистичные обновления UI).`,
+      `Оптимизация сборки и Web Vitals: Участвовал в переводе сборки проекта с легаси Webpack на Vite, что сократило время холодного старта дев-сервера с 40 до 3 секунд. `,
     ],
     profileId: profileId,
   },
@@ -83,24 +84,10 @@ const experiences = [
 
 const projects = [
   {
-    id: 'project-bc',
-    name: 'Digital Business Card API',
-    description: 'A production-ready GraphQL API for a developer profile, portfolio, and resume data.',
-    url: 'https://github.com/your-handle/digital-business-card',
-    profileId: profileId,
-  },
-  {
-    id: 'project-analytics',
-    name: 'Analytics Platform',
-    description: 'A reporting and monitoring system for product and operational KPIs.',
-    url: 'https://github.com/your-handle/analytics-platform',
-    profileId: profileId,
-  },
-  {
-    id: 'project-automation',
-    name: 'Workflow Automation',
-    description: 'Developer tooling automating deployment, release, and maintenance processes.',
-    url: 'https://github.com/your-handle/workflow-automation',
+    id: 'cd-leader-b',
+    name: 'CD Leader Backend',
+    description: 'Cерверное приложение, построенное на базе NestJS для онлайн лидербордов',
+    url: 'https://github.com/feeeed/cd-leader-b',
     profileId: profileId,
   },
 ];
@@ -110,13 +97,13 @@ async function main() {
     await tx.profile.upsert({
       where: { id: profileId },
       update: {
-        name: 'Alex Morgan',
-        description: 'Software engineer focused on backend systems, API design, and developer experience.',
+        name: 'Makushin Egor',
+        description: 'Software engineer focused on backend and frontend systems, API design, and developer experience.',
       },
       create: {
         id: profileId,
-        name: 'Alex Morgan',
-        description: 'Software engineer focused on backend systems, API design, and developer experience.',
+        name: 'Makushin Egor',
+        description: 'Software engineer focused on backend and frontend systems, API design, and developer experience.',
       },
     });
 
